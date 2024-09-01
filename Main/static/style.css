@@ -1,0 +1,149 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #00bcd4, #4caf50); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Centering the Content Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden for animation */
+    animation: fadeIn 1s forwards; /* Fade in animation */
+}
+
+/* Navigation Bar Styling */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    background-color: #007bff;
+    border: 2px solid #0056b3; /* Border around the nav bar */
+    border-radius: 10px; /* Rounded corners for the nav bar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    animation: slideIn 0.5s ease-out; /* Slide in animation */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    border-radius: 5px; /* Rounded corners for links */
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Form Styling */
+#resume-form {
+    width: 100%;
+    border: 2px solid #007bff; /* Border around the form */
+    border-radius: 10px; /* Rounded corners for the form */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    animation: fadeInUp 1s ease-out; /* Fade in-up animation */
+    background-color: #f9f9f9; /* Light background for form */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-group input[type="file"],
+.form-group input[type="text"] {
+    width: calc(100% - 20px); /* Full-width input with padding adjustment */
+    padding: 10px;
+    border: 2px solid #ddd; /* Border for input fields */
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input[type="file"]:focus,
+.form-group input[type="text"]:focus {
+    border-color: #007bff; /* Focus border color */
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Move content from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Move content from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px); /* Start from above */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
