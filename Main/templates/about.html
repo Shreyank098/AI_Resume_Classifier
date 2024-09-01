@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NAS Hunters</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Basic reset and styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure full height */
+        }
+
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        .container {
+            flex: 1; /* Allow the container to grow and push the footer down */
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .creator {
+            margin-bottom: 20px;
+        }
+
+        .creator h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .creator p {
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NAS Hunters</h1>
+    </header>
+    <div class="container">
+        <h2>About Us</h2>
+        <section>
+            <h3>Our Vision</h3>
+            <p>At NAS Hunters, our vision is to revolutionize the recruitment landscape through cutting-edge AI technology. Our platform leverages advanced algorithms to streamline the hiring process, making it easier for organizations to find the best candidates and for candidates to find their ideal job opportunities. We believe in the power of AI to transform the way talent is discovered, nurtured, and matched with opportunities.</p>
+        </section>
+        <section>
+            <h3>Meet the Creators</h3>
+            <div class="creator">
+                <h3>Ayush Shekar</h3>
+                <p>Phone: 9113217988</p>
+                <p>Ayush Shekar is a visionary in the field of artificial intelligence and machine learning. With a passion for technology and innovation, Ayush has been instrumental in shaping the NAS Hunters platform. His expertise in AI algorithms and data analysis has been key to developing the core functionalities of our system.</p>
+            </div>
+            <div class="creator">
+                <h3>K Shreyank</h3>
+                <p>Phone: 9597653466</p>
+                <p>K Shreyank brings a wealth of experience in software development and project management to the NAS Hunters team. His focus on creating user-centric solutions and his dedication to quality have been crucial in ensuring that our platform is both powerful and user-friendly.</p>
+            </div>
+            <div class="creator">
+                <h3>NagaSimha N</h3>
+                <p>Phone: 9901678694</p>
+                <p>NagaSimha N is an expert in data science and analytics, with a strong background in developing scalable solutions. His contributions to NAS Hunters include optimizing our predictive models and ensuring that our platform delivers accurate and actionable insights.</p>
+            </div>
+        </section>
+        <section>
+            <h3>Our Commitment</h3>
+            <p>We are committed to pushing the boundaries of what AI can achieve in recruitment. Our team is dedicated to continuous innovation and improvement, ensuring that NAS Hunters remains at the forefront of the industry. We aim to make a global impact by enhancing the efficiency and effectiveness of the hiring process, ultimately benefiting both employers and job seekers worldwide.</p>
+        </section>
+    </div>
+</body>
+</html>

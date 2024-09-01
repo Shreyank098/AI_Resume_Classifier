@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - NAS HUNTERS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #fff;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            width: 50%;
+            margin: 0 auto;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        label, input, textarea {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+        input, textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #fff;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .contact-details {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .contact-details h2 {
+            margin-top: 0;
+            color: #fff;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        @keyframes fadeInDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+    <script>
+        async function sendMessage(event) {
+            event.preventDefault();
+            const name = document.querySelector('input[name="name"]').value;
+            const message = document.querySelector('textarea[name="message"]').value;
+
+            try {
+                const response = await fetch('/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name, message }),
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    alert('Message sent successfully!');
+                } else {
+                    alert('Failed to send message. Error: ' + result.error);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Failed to send message.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form onsubmit="sendMessage(event)">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+        
+        <label for="message">Message:</label>
+        <textarea name="message" rows="4" required></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-details">
+        <h2>Contact Information</h2>
+        <p><strong>Ayush Shekar</strong><br>Phone: 9113217988</p>
+        <p><strong>K Shreyank</strong><br>Phone: 9597653466</p>
+        <p><strong>NagaSimha N</strong><br>Phone: 9901678694</p>
+    </div>
+</body>
+</html>

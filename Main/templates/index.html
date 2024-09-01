@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAS Hunters</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* General body styling */
+body {
+    overflow: hidden;
+    background: #f0f0f0; /* Background color or image */
+    position: relative;
+}
+
+/* Bubble container */
+/* More Specific */
+.container .bubbles div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Individual bubble styling */
+.bubbles div {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    opacity: 0.5;
+    animation: bubbleAnimation 10s infinite;
+}
+
+/* Bubble animation */
+@keyframes bubbleAnimation {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0.5;
+    }
+}
+
+/* Specific bubbles */
+.bubbles div:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-duration: 12s;
+}
+
+.bubbles div:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    left: 30%;
+    animation-duration: 10s;
+}
+
+.bubbles div:nth-child(3) {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    animation-duration: 8s;
+}
+
+/* Add more specific bubbles if needed */
+
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #3e9d46;
+            color: white;
+            font-size: 2rem;
+            animation: headerAnimation 5s ease-in-out infinite; /* Slow-motion animation */
+            margin-bottom: 20px; /* Space below header */
+        }
+
+        @keyframes headerAnimation {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .container h2 {
+            margin-top: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .services-section {
+            margin-top: 20px;
+        }
+
+        .services-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: calc(50% - 20px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .service:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .service h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        NAS Hunters
+    </header>
+    <div class="container">
+        <h2>Welcome to NAS Hunters Recruitment System</h2>
+        <p>Your AI-powered recruitment assistant.</p>
+        <a href="/start" class="btn">START</a>
+
+        <div class="services-section">
+            <h2>Our Key Services</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Resume Analysis</h3>
+                    <p>Analyze resumes using advanced AI algorithms.</p>
+                </div>
+                <div class="service">
+                    <h3>Job Prediction</h3>
+                    <p>Predict suitable job categories for candidates.</p>
+                </div>
+                <div class="service">
+                    <h3>ATS Scoring</h3>
+                    <p>Evaluate resumes with ATS compatibility scoring.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
